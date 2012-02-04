@@ -9,73 +9,49 @@
 		<script type="text/javascript" src="jquery-1.7.1.js"></script>
 		<script type="text/javascript" src="jqModal.js"> </script>
 	</head>
-	<script type="text/javascript" >
-		$(document).ready( function() {
-				console.log("start");
-				var loadInIframeModal = function(hash){
-				    var $trigger = $(hash.t);
-				    var $modal = $(hash.w);
-				    var myUrl = $trigger.attr('href');
-				    var myTitle= $trigger.attr('title');
-				    var $modalContent = $("iframe", $modal);
-				 
-				    $modalContent.html('').attr('src', myUrl);
-				    //let's use the anchor "title" attribute as modal window title
-				    $('#jqmTitleText').text(myTitle);
-				    $modal.jqmShow();
-				}
-				// initialise jqModal
-				$('#modalWindow').jqm({
-overlay: 70,
-modal: true,
-trigger: 'a.thickbox',
-modal: true,
-target: '#jqmContent',
-onShow:  loadInIframeModal
-});
-$().ready(function () {
-		    $('#About').jqm();
+	<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+			$("a.youtube").YouTubePopup({ autoplay: 0,
+				                            'width': 640,
+					                          'height': 390,
+							                      'hideTitleBar': true,
+									                  'clickOutsideClose': false,
+																		'overlayOpacity': 0.5
+											   
 				});
 
-				 
-		});
-
-	</script>
-	<link type="text/css"
-	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
-	<script type="text/javascript">
-		$(function () {
-				$("a.youtube").YouTubePopup({ autoplay: 0 });
+			$('a.youtube').click(function() {
+				var description = $(this).attr("description");
+				$("#desc").text(description);
 				});
+			});
+
 </script>
-<body>
-		<a onclick="$('#modalWindow').jqmShow();" href="#">pop</a>
-		<a onclick="loadInIframeModal({overlay:70,modal:true,target:"#jqmContent"});" href="#">load</a>
-		<div id="About" class="jqmWindow aboutPopUp" style="width: 300px; height: 250px;"></div>
-		
-		<a onclick="$('#About').jqmShow();" href="#">About</a>
-		
+		<body>
+			<div id="desc"></div>
+			<ul>
+				<li>
+				<a class="youtube" href="#" rel="-9k4xTFPPA8" title="Whim 1" description="this is a description first">		
+					<img height="90" src=http://img.youtube.com/vi/-9k4xTFPPA8/0.jpg>
+				</a>
+				</li>
+				<li>
+				<a class="youtube" href="#" rel="-9k4xTFPPA8" title="Whim 2 " description="this is a description second">		
+					<img height="90" src=http://img.youtube.com/vi/-9k4xTFPPA8/0.jpg>
+				</a>
+				</li>
+				<li>
+				<a class="youtube" href="#" rel="-9k4xTFPPA8" title="Whim 3 " description="this is a description third">		
+					<img height="90" src=http://img.youtube.com/vi/-9k4xTFPPA8/0.jpg>
+				</a>
+				</li>
+			</ul>
 
 
-		    <a class="youtube" href="#" rel="-9k4xTFPPA8" title="jQuery YouTube Popup Player Plugin TEST">		
-		<img src=http://img.youtube.com/vi/-9k4xTFPPA8/1.jpg>
-</a>
-
-		
-	
-		
-		<div id="modalWindow" class="jqmWindow">
-			        <div id="jqmTitle">
-				            <button class="jqmClose">
-					                Close X
-					            </button>
-				            <span id="jqmTitleText">Title of modal window</span>
-				        </div>
-			        <iframe id="jqmContent" src=""> bla iframe </iframe>
-	  </div>
 	</body>
-</html>
+	</html>
 
 
