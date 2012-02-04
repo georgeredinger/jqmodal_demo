@@ -1,229 +1,81 @@
- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><script type="text/javascript">
-//<![CDATA[
-window.__CF=[];window.__CF.DJS=[];window.__CF.DJS.push({atok:'0a2997b5109b55600fb829d6001b031c',p:0,byc:0,zone:'pixeline.be'});(function(a,b){var c=a.__CF,d=b.createElement("script"),e=b.getElementsByTagName("script")[0];e.parentNode.insertBefore(d,e),d.src="//ajax.cloudflare.com/cdn-cgi/nexp/v=4058813167/dominate.min.js"})(window,document);
-//]]>
-</script><script type="text/javascript">
-//<![CDATA[
-try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:0,byc:0,owl:0,mirage:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/v=1110114179/"},atok:"0a2997b5109b55600fb829d6001b031c",zone:"pixeline.be",rocket:"a",apps:{"ga_key":{"ua":"UA-162823-7","ga_bs":"2"}}}];document.write('<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/v=3375350675/cloudflare.min.js"><'+'\/script>')}}catch(a){};
-//]]>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="stylesheet" type="text/css" media="screen" href="jqModal.css"/>
+		<link rel="stylesheet" type="text/css" media="screen" href="demo.css"/>
+		<title>jqModal example</title>
+
+		<script type="text/javascript" src="jquery-1.7.1.js"></script>
+		<script type="text/javascript" src="jqModal.js"> </script>
+	</head>
+	<script type="text/javascript" >
+		$(document).ready( function() {
+				console.log("start");
+				var loadInIframeModal = function(hash){
+				    var $trigger = $(hash.t);
+				    var $modal = $(hash.w);
+				    var myUrl = $trigger.attr('href');
+				    var myTitle= $trigger.attr('title');
+				    var $modalContent = $("iframe", $modal);
+				 
+				    $modalContent.html('').attr('src', myUrl);
+				    //let's use the anchor "title" attribute as modal window title
+				    $('#jqmTitleText').text(myTitle);
+				    $modal.jqmShow();
+				}
+				// initialise jqModal
+				$('#modalWindow').jqm({
+overlay: 70,
+modal: true,
+trigger: 'a.thickbox',
+modal: true,
+target: '#jqmContent',
+onShow:  loadInIframeModal
+});
+$().ready(function () {
+		    $('#About').jqm();
+				});
+
+				 
+		});
+
+	</script>
+	<link type="text/css"
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.youtubepopup.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+				$("a.youtube").YouTubePopup({ autoplay: 0 });
+				});
 </script>
-<script type="text/javascript">
-//<![CDATA[
-window.__CF=window.__CF||{};window.__CF.AJS={"ga_key":{"ua":"UA-162823-7","ga_bs":"2"}};
-//]]>
-</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link rel="shortcut icon" href="http://localhost/lab-au.com/dev/favicon.ico"/>
-<link rel="stylesheet" type="text/css" media="screen" href="../jqUploader/style.css"/>
-<link rel="stylesheet" type="text/css" media="screen" href="jqModal.css"/>
-<title>Thickbox to jqModal example</title>
- 
-<style type="text/css">.jqmOverlay{background-color:#FFF;}.jqmWindow{background:#888888 url(modal_bckgrn.gif) left top repeat-x;color:#000;border:1px solid #888888;padding:0 0px 50px;}button.jqmClose{background:none;border:0px solid #EAEAEB;color:#000;clear:right;float:right;padding:0;margin-top:5px;margin-left:5px;cursor:pointer;font-size:8px;letter-spacing:1px;}button.jqmClose:hover,button.jqmClose:active{color:#FFF;border:0px solid #FFF;}#jqmTitle{background:transparent;color:black;text-transform:capitalize;height:50px;padding:0px 5px 0 10px;}#jqmContent{width:100%;height:100%;display:block;clear:both;margin:0;margin-top:0px;background:#e8e8e8;border:1px solid #888888;}</style>
-<!--[if gte IE 5.5]>
-<![if lt IE 7]>
-<style type="text/css">
-* html .jqmWindow {
-    position: absolute;
-    top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
-}
-</style>
-<![endif]>
-<![endif]-->
- 
-<script type="text/djs" data-djssrc="jquery.1.2.6.js">
-        </script>
-<script data-djssrc="jqModal.js" type="text/djs">
-        </script>
-<script type="text/djs">
-            $(document).ready(function(){
-                 //thickbox replacement
-    var closeModal = function(hash)
-    {
-        var $modalWindow = $(hash.w);
-
-        //$('#jqmContent').attr('src', 'blank.html');
-        $modalWindow.fadeOut('2000', function()
-        {
-            hash.o.remove();
-            //refresh parent
-
-            if (hash.refreshAfterClose === 'true')
-            {
-
-                window.location.href = document.location.href;
-            }
-        });
-    };
-    var openInFrame = function(hash)
-    {
-        var $trigger = $(hash.t);
-        var $modalWindow = $(hash.w);
-        var $modalContainer = $('iframe', $modalWindow);
-        var myUrl = $trigger.attr('href');
-        var myTitle = $trigger.attr('title');
-        var newWidth = 0, newHeight = 0, newLeft = 0, newTop = 0;
-        $modalContainer.html('').attr('src', myUrl);
-        $('#jqmTitleText').text(myTitle);
-        myUrl = (myUrl.lastIndexOf("#") > -1) ? myUrl.slice(0, myUrl.lastIndexOf("#")) : myUrl;
-        var queryString = (myUrl.indexOf("?") > -1) ? myUrl.substr(myUrl.indexOf("?") + 1) : null;
-
-        if (queryString != null && typeof queryString != 'undefined')
-        {
-            var queryVarsArray = queryString.split("&");
-            for (var i = 0; i < queryVarsArray.length; i++)
-            {
-                if (unescape(queryVarsArray[i].split("=")[0]) == 'width')
-                {
-                    var newWidth = queryVarsArray[i].split("=")[1];
-                }
-                if (escape(unescape(queryVarsArray[i].split("=")[0])) == 'height')
-                {
-                    var newHeight = queryVarsArray[i].split("=")[1];
-                }
-                if (escape(unescape(queryVarsArray[i].split("=")[0])) == 'jqmRefresh')
-                {
-                    // if true, launches a "refresh parent window" order after the modal is closed.
-
-                    hash.refreshAfterClose = queryVarsArray[i].split("=")[1]
-                } else
-                {
-
-                    hash.refreshAfterClose = false;
-                }
-            }
-            // let's run through all possible values: 90%, nothing or a value in pixel
-            if (newHeight != 0)
-            {
-                if (newHeight.indexOf('%') > -1)
-                {
-
-                    newHeight = Math.floor(parseInt($(window).height()) * (parseInt(newHeight) / 100));
-
-                }
-                var newTop = Math.floor(parseInt($(window).height() - newHeight) / 2);
-            }
-            else
-            {
-                newHeight = $modalWindow.height();
-            }
-            if (newWidth != 0)
-            {
-                if (newWidth.indexOf('%') > -1)
-                {
-                    newWidth = Math.floor(parseInt($(window).width() / 100) * parseInt(newWidth));
-                }
-                var newLeft = Math.floor(parseInt($(window).width() / 2) - parseInt(newWidth) / 2);
-
-            }
-            else
-            {
-                newWidth = $modalWindow.width();
-            }
-
-            // do the animation so that the windows stays on center of screen despite resizing
-            $modalWindow.css({
-                width: newWidth,
-                height: newHeight,
-                opacity: 0
-            }).jqmShow().animate({
-                width: newWidth,
-                height: newHeight,
-                top: newTop,
-                left: newLeft,
-                marginLeft: 0,
-                opacity: 1
-            }, 'slow');
-        }
-        else
-        {
-            // don't do animations
-            $modalWindow.jqmShow();
-        }
-
-    }
-
-    $('#modalWindow').jqm({
-        overlay: 70,
-        modal: true,
-        trigger: 'a.thickbox',
-        target: '#jqmContent',
-        onHide: closeModal,
-        onShow: openInFrame
-    });
-
-            });
-        </script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-162823-7']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
-/* ]]> */
-</script>
-</head>
 <body>
- 
-<div id="header">
-<h1>Thickbox to jqModal example</h1>
-</div>
- 
-<div id="main">
-<p>
-Let's see what <a href="http://www.google.com/search?q=jqmodal&width=90%&height=50%&jqmRefresh=false" class="thickbox" title="g00gle knows it all">google thinks</a> of jqModal !
-</p>
-<p>
-And what does <a href="http://search.live.com/results.aspx?q=jqmodal&go=&form=QBLH&width=50%&height=80%&jqmRefresh=true" title="Bill is in da House" class="thickbox">MSN Live</a>
-think of <a class="thickbox" href="http://dev.iceburg.net/jquery/jqModal/?width=79%&height=90%" title="The swiss-army knife of a modal world">jqmodal</a>? Wooh, a lot !
-</p>
-<p>
-This one will refresh the page when you close it: <a href="http://www.google.com/search?q=love&width=90%&height=50%&jqmRefresh=true" class="thickbox" title="g00gle knows it all">try it</a> !
-</p>
-<p>
-If you wonder what this page is about, how about <a title="jqModal iframe mode explained" href="http://www.pixeline.be/blog/2008/javascript-loading-external-urls-in-jqmodal-jquery-plugin/?width=95%&height=80%" class="thickbox">reading the dedicated blog post</a>
-?
-</p>
-<p><a href="test_closebutton.html?width=250&height=150" class="thickbox" title="page with close button">This page</a> contains a "close" button, try it!</p>
-</div>
- 
-</div>
-<div id="modalWindow" class="jqmWindow">
-<div id="jqmTitle">
-<button class="jqmClose">
-X
-</button>
-<span id="jqmTitleText">Title of modal window</span>
-</div>
-<iframe id="jqmContent" src="">
-</iframe>
-</div>
-<script type="text/djs">/* CloudFlare analytics upgrade */
-window._gat=window._gat||{_getTracker:function(){return {_trackPageview:function(){}}}};
-</script>
-<script type="text/djs">
-var pageTracker = _gat._getTracker("UA-162823-7");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
- 
-<script type="text/djs">
-var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.pixeline.eu/" : "http://stats.pixeline.eu/");
-document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script type="text/djs">
-try {
-var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
-piwikTracker.trackPageView();
-piwikTracker.enableLinkTracking();
-} catch( err ) {}
-</script><noscript><p><img src="http://stats.pixeline.eu/piwik.php?idsite=2" style="border:0" alt=""/></p></noscript>
- <script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/v=4188748942/apps1.min.js"></script><script type="text/javascript">__CF.AJS.init1();</script></body>
+		<a onclick="$('#modalWindow').jqmShow();" href="#">pop</a>
+		<a onclick="loadInIframeModal({overlay:70,modal:true,target:"#jqmContent"});" href="#">load</a>
+		<div id="About" class="jqmWindow aboutPopUp" style="width: 300px; height: 250px;"></div>
+		
+		<a onclick="$('#About').jqmShow();" href="#">About</a>
+		
+
+
+		    <a class="youtube" href="#" rel="-9k4xTFPPA8" title="jQuery YouTube Popup Player Plugin TEST">		
+		<img src=http://img.youtube.com/vi/-9k4xTFPPA8/1.jpg>
+</a>
+
+		
+	
+		
+		<div id="modalWindow" class="jqmWindow">
+			        <div id="jqmTitle">
+				            <button class="jqmClose">
+					                Close X
+					            </button>
+				            <span id="jqmTitleText">Title of modal window</span>
+				        </div>
+			        <iframe id="jqmContent" src=""> bla iframe </iframe>
+	  </div>
+	</body>
 </html>
+
+
