@@ -1,0 +1,476 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="nl">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JQModal &laquo;  Affinno&#8217;s Weblog</title>
+<link rel="stylesheet" href="http://s0.wp.com/wp-content/themes/pub/freshy/style.css?m=1325841180g" type="text/css" media="screen" title="Freshy"/>
+<!--[if IE 7]>
+	<link rel="stylesheet" href="http://s0.wp.com/wp-content/themes/pub/freshy/ie7.css?m=1317425453g" type="text/css" media="screen" />
+<![endif]-->
+<!--[if lt IE 7]>
+	<link rel="stylesheet" href="http://s0.wp.com/wp-content/themes/pub/freshy/ie6.css?m=1323834105g" type="text/css" media="screen" />
+<![endif]-->
+<link rel="pingback" href="http://affinno.wordpress.com/xmlrpc.php" />
+<link rel="alternate" type="application/rss+xml" title="Affinno&#039;s Weblog &raquo; Feed" href="http://affinno.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Affinno&#039;s Weblog &raquo; reacties feed" href="http://affinno.wordpress.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Affinno&#039;s Weblog &raquo; JQModal Tag Feed" href="http://affinno.wordpress.com/tag/jqmodal/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel="stylesheet" href="http://s0.wp.com/wp-content/themes/h4/global.css?m=1317425428g" type="text/css" />
+<link rel='stylesheet' id='loggedout-subscribe-css'  href='http://s0.wp.com/wp-content/blog-plugins/loggedout-follow/widget.css?m=1325676618g&#038;ver=20120104' type='text/css' media='all' />
+<link rel='stylesheet' id='post-reactions-css'  href='http://s2.wp.com/wp-content/mu-plugins/post-flair/style.css?m=1322086815g&#038;ver=3' type='text/css' media='all' />
+<script type='text/javascript' src='http://s2.wp.com/wp-includes/js/jquery/jquery.js?m=1322588682g&#038;ver=1.7.1'></script>
+<script type='text/javascript' src='http://s2.wp.com/wp-content/blog-plugins/loggedout-follow/widget.js?m=1320005313g&#038;ver=20111128'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://affinno.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://affinno.wordpress.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress.com" />
+<link rel="shortcut icon" type="image/x-icon" href="http://1.gravatar.com/blavatar/d866d023a2d6fd739194a5bd7d05250d?s=16" sizes="16x16" />
+<link rel="icon" type="image/x-icon" href="http://1.gravatar.com/blavatar/d866d023a2d6fd739194a5bd7d05250d?s=16" sizes="16x16" />
+<link rel="apple-touch-icon-precomposed" href="http://1.gravatar.com/blavatar/5d16412ddeb58468829bf93ababd0c6d?s=114" />
+<link rel='openid.server' href='http://affinno.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='http://affinno.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="http://affinno.wordpress.com/osd.xml" title="Affinno&#039;s Weblog" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com" />
+	<style type="text/css">
+	/* <![CDATA[ */
+			/* ]]> */
+	</style>
+	
+	<style type="text/css">
+	.menu.primary li a {
+		background-image:url("http://s0.wp.com/wp-content/themes/pub/freshy/images/menu/menu_triple.gif?m=1317425452g");
+	}
+	.menu.primary li a.first_menu {
+		background-image:url("http://s0.wp.com/wp-content/themes/pub/freshy/images/menu/menu_start_triple.gif?m=1317425452g");
+	}
+	.menu.primary li a.last_menu {
+		background-image:url("http://s0.wp.com/wp-content/themes/pub/freshy/images/menu/menu_end_triple.gif?m=1317425452g");
+	}
+
+	.description {
+		color:#ADCF20;
+	}
+	#content .commentlist dd.author_comment {
+		background-color:#a3cb00 !important;
+	}
+	html > body #content .commentlist dd.author_comment {
+		background-color:#a3cb00 !important;
+	}
+	#content .commentlist dt.author_comment .date {
+		color:#a3cb00 !important;
+		border-color:#a3cb00 !important;
+	}
+	#content .commentlist .author_comment .author,
+	#content .commentlist .author_comment .author a {
+		color:#a3cb00 !important;
+		border-color:#a3cb00 !important;
+	}
+	#sidebar h2 {
+		color:#f78b0c;
+		background-color:#FFFFFF;
+		border-bottom-color:#f78b0c;
+	}
+	#sidebar {
+		background-color:#FFFFFF;
+	}
+	*::-moz-selection {
+		background-color:#FF3C00;
+	}
+
+	#content a:hover {
+		border-bottom:1px dotted #FF3C00;
+	}
+
+	#sidebar a:hover,
+	#sidebar .current_page_item li a:hover,
+	#sidebar .current-cat li a:hover,
+	#sidebar .current_page_item a,
+	#sidebar .current-cat a ,
+	.readmore,
+	#content .postmetadata a
+	{
+		color : #FF3C00;
+	}
+
+	#title_image {
+		margin:0;
+		text-align:left;
+		display:block;
+		height:95px;
+	}
+
+	</style>
+
+	<style type="text/css">
+	#title_image {
+	background-image:url(http://s0.wp.com/wp-content/themes/pub/freshy/images/headers/header_image6.jpg);
+	}
+</style>
+<meta name="application-name" content="Affinno&#039;s Weblog" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Blog over software development in het algemeen en Microsoft technologie in het bijzonder." /><meta name="msapplication-task" content="name=Abonneren;action-uri=http://affinno.wordpress.com/feed/;icon-uri=http://1.gravatar.com/blavatar/d866d023a2d6fd739194a5bd7d05250d?s=16" /><meta name="msapplication-task" content="name=Meld je aan voor een gratis blog;action-uri=http://wordpress.com/signup/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com ondersteuning;action-uri=http://support.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=http://s2.wp.com/i/favicon.ico" /></head>
+<body class="highlander-enabled highlander-light">
+
+<div id="page">
+	
+	<!-- header -->
+	<div id="header">
+		<div id="title">
+			<h1>
+				<a href="http://affinno.wordpress.com/">
+					<span>Affinno&#8217;s Weblog</span>
+				</a>
+			</h1>
+			<div class="description">
+				<small>Blog over software development in het algemeen en Microsoft technologie in het bijzonder.</small>
+			</div>
+		</div>
+		<div id="title_image"></div>
+	</div>
+
+	<!-- main div -->
+	<div id="frame">
+
+	<!-- main menu -->
+	<ul class="menu page-menu primary">
+	<li class="page_item">
+		<a class="first_menu" href="http://affinno.wordpress.com/">
+			Home		</a>
+	</li>
+
+	<li class="page_item"><a href="http://affinno.wordpress.com/about/" title="About">About</a></li>
+
+	<li class="last_menu">
+		<!-- put an empty link to have the end of the menu anyway -->
+		<a class="last_menu_off"></a>
+	</li>
+</ul>
+
+	<hr style="display:none"/>
+
+	<div id="content">
+
+	<!-- pages -->
+	
+		
+			<div class="post-334 post type-post status-publish format-standard hentry category-ajax category-biek category-javascript category-jquery tag-jqmodal" id="post-334">
+
+				<h2><a href="http://affinno.wordpress.com/2011/01/24/pop-up-control-jqmodal-jquery-modal-pop-up/" rel="bookmark" title="Lees Pop up control: jqModal Jquery modal&nbsp;pop-up">Pop up control: jqModal Jquery modal&nbsp;pop-up</a></h2>
+				<small class="date">
+					<span class="date_day">24</span>
+					<span class="date_month">01</span>
+					<span class="date_year">2011</span>
+				</small>
+
+				<div class="entry">
+					<p>I was looking for a pop-up window like solution for a client.<br />
+It should support these options:</p>
+<ul>
+<li>Add the pop-up content in the document (so the content would be loaded with the parent document)</li>
+<li>Add the pop-up content on demand (when the uses clicks on it)</li>
+<li>Close the pop-up with a button.</li>
+</ul>
+<p>After a little searching i came across this control: the jqModal: Minimalist Modaling with jQuery</p>
+<p>One thing beforehand: the word &#8216;minimalistic&#8217; scared me; i thought this would be a replacement for &#8216;does not exactly what you want&#8217;, or something similar.<br />
+Well, i was wrong.</p>
+<p>The first pleasant surprise was that the pop-up would disappear when clicked next to it.<br />
+I personally dislike pop-ups you have to close by clicking a button (most of the time very small and placed at a weird location).<br />
+So just clicking next tot the pop-up and making it pop-down felt good.</p>
+<p>Then <strong>option 1: add the pop-up in the document.</strong><br />
+Easy as 1,2, 3:<br />
+Add a div with the content (in my case, the content was put in by filling literals via the ASP.Net framework, but you could use any technology or plain text to set content in the div)</p>
+<p><pre class="brush: csharp; light: true; toolbar: true; wrap-lines: true;">
+&lt;div id=&quot;About&quot; class=&quot;jqmWindow aboutPopUp&quot; style=&quot;width: 300px; height: 250px;&quot;&gt;&lt;/div&gt;
+</pre></p>
+<p>No need to hide the div, just this script:</p>
+<p><pre class="brush: csharp; light: true; toolbar: true; wrap-lines: true;">
+$().ready(function () {
+    $('#About').jqm();
+});
+</pre></p>
+<p>and a link off course, to click and show the pop-up (div, to be exact. Like most of the pop-up controls, the thing what happens is just a show / hide of a div).</p>
+<p><pre class="brush: csharp; light: true; toolbar: true; wrap-lines: true;">
+&lt;a onclick=&quot;$('#About').jqmShow();&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;
+</pre></p>
+<p>Then <strong>option 2: filling it on demand.</strong><br />
+For some pop-ups which were not shown so often or with large content, we wanted it to load the content on demand.<br />
+And for that too, there is a simple solution: load the page with a Ajax call.<br />
+At the server, i implemented an aspx page which was called for all the pop-up&#8217;s, and would return the right html.<br />
+This html was not changed frequently so it was cached and thereby served quickly to the pop-up.<br />
+The same way a div element (now without content, which gets injected after the Ajax call)</p>
+<p><pre class="brush: csharp; light: true; toolbar: true; wrap-lines: true;">
+&lt;div style=&quot;width:300px;height:250px;&quot; id=&quot;MoreInfoGeneral&quot;&gt;&lt;/div&gt;
+
+</pre></p>
+<p>and also a one liner for the setup:</p>
+<p><pre class="brush: csharp; light: true; toolbar: true; wrap-lines: true;">
+$('#MoreInfoGeneral').jqm({ ajax: '/more-info/?section=MoreInfoGeneral' });
+</pre></p>
+<p>and the same code for the link to show / hide the pop-up, like in the first example (but off course with another div id).</p>
+<p>And for <strong>option 3</strong>, for people who did not see the clicking next to the div to make it pop down as a natural thing to do,<strong> the close button</strong>.<br />
+Just add an image or link to pop down the pop-up:</p>
+<p><pre class="brush: csharp; light: true; toolbar: true; wrap-lines: true;">
+&lt;img id=&quot;imgPopupCloseButton&quot; style=&quot;cursor: pointer;&quot; onclick=&quot;HideJqmWindow('{DIVID}')&quot; src=&quot;/Images/closeButton.png&quot; alt=&quot;&quot; width=&quot;20&quot; /&gt;
+</pre></p>
+<p>(in this case, i injected the right id in the source at the placeholder&#8217;{DIVID}&#8217; to reuse this line of code.</p>
+<p>Ans there it is, an easy to use yet very well working pop-up control.</p>
+<p>You can get it here <a href="http://dev.iceburg.net/jquery/jqModal/">http://dev.iceburg.net/jquery/jqModal/</a></p>
+<div class="sharedaddy"></div>				</div>
+				<br class="clear" />
+				
+				<small class="postmetadata">Reacties : <a href="http://affinno.wordpress.com/2011/01/24/pop-up-control-jqmodal-jquery-modal-pop-up/#comments" title="Reactie op Pop up control: jqModal Jquery modal&nbsp;pop-up">1 reactie &#187;</a></small>
+				<br/>
+				<small class="postmetadata">Tags: <a href="http://affinno.wordpress.com/tag/jqmodal/" rel="tag">JQModal</a></small>
+				<br/>
+				<small class="postmetadata">Categorie&#235;n : <a href="http://affinno.wordpress.com/category/ajax/" title="Alle berichten bekijken in AJAX" rel="category tag">AJAX</a>, <a href="http://affinno.wordpress.com/category/biek/" title="Alle berichten bekijken in Biek" rel="category tag">Biek</a>, <a href="http://affinno.wordpress.com/category/javascript/" title="Alle berichten bekijken in Javascript" rel="category tag">Javascript</a>, <a href="http://affinno.wordpress.com/category/jquery/" title="Alle berichten bekijken in Jquery" rel="category tag">Jquery</a></small>
+			</div>
+
+		<hr style="display:none;"/>
+
+		
+		<p class="navigation">
+			<span class="alignleft"></span>
+			<span class="alignright"></span>
+		</p>
+
+	<!-- nothing found -->
+	
+	<!-- homepage -->
+
+	
+	</div>
+
+	<hr/>
+
+	<!-- sidebar -->
+	
+	<div id="sidebar">
+				<div>
+		<div id="calendar-2" class="widget widget_calendar"><h2 class="title">kalender</h2><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>februari 2012</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="maandag">M</th>
+		<th scope="col" title="dinsdag">D</th>
+		<th scope="col" title="woensdag">W</th>
+		<th scope="col" title="donderdag">D</th>
+		<th scope="col" title="vrijdag">V</th>
+		<th scope="col" title="zaterdag">Z</th>
+		<th scope="col" title="zondag">Z</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://affinno.wordpress.com/2012/01/" title="Berichten van januari 2012 bekijken">&laquo; jan</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td id="today">4</td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td>
+		<td class="pad" colspan="4">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></div>		<div id="blog-stats" class="widget widget_statscounter">			<h2 class="title">Blog Stats</h2>			<ul>
+			<li>12,054 hits</li>
+			</ul>
+		</div><div id="wp_tag_cloud" class="widget wp_widget_tag_cloud"><h2 class="title">Tag cloud</h2><div style="overflow:hidden"><a href='http://affinno.wordpress.com/tag/agile/' class='tag-link-11287' title='3 berichten' style='font-size: 22pt;'>Agile</a>
+<a href='http://affinno.wordpress.com/tag/ajax/' class='tag-link-141' title='1 bericht' style='font-size: 8pt;'>AJAX</a>
+<a href='http://affinno.wordpress.com/tag/aspnet/' class='tag-link-2425' title='1 bericht' style='font-size: 8pt;'>ASP.Net</a>
+<a href='http://affinno.wordpress.com/tag/asp-net-mvc/' class='tag-link-14210236' title='2 berichten' style='font-size: 16.4pt;'>Asp.Net MVC</a>
+<a href='http://affinno.wordpress.com/tag/boekbespreking/' class='tag-link-267900' title='2 berichten' style='font-size: 16.4pt;'>Boekbespreking</a>
+<a href='http://affinno.wordpress.com/tag/c/' class='tag-link-2426' title='1 bericht' style='font-size: 8pt;'>C#</a>
+<a href='http://affinno.wordpress.com/tag/css/' class='tag-link-169' title='3 berichten' style='font-size: 22pt;'>CSS</a>
+<a href='http://affinno.wordpress.com/tag/debug/' class='tag-link-28136' title='1 bericht' style='font-size: 8pt;'>debug</a>
+<a href='http://affinno.wordpress.com/tag/ervaring/' class='tag-link-844618' title='1 bericht' style='font-size: 8pt;'>ervaring</a>
+<a href='http://affinno.wordpress.com/tag/extension-method/' class='tag-link-4344301' title='1 bericht' style='font-size: 8pt;'>Extension method</a>
+<a href='http://affinno.wordpress.com/tag/hello-world/' class='tag-link-15080' title='1 bericht' style='font-size: 8pt;'>Hello world</a>
+<a href='http://affinno.wordpress.com/tag/jac/' class='tag-link-438508' title='1 bericht' style='font-size: 8pt;'>JAC</a>
+<a href='http://affinno.wordpress.com/tag/jqmodal/' class='tag-link-7479597' title='1 bericht' style='font-size: 8pt;'>JQModal</a>
+<a href='http://affinno.wordpress.com/tag/jquery-validation/' class='tag-link-10712054' title='1 bericht' style='font-size: 8pt;'>jQuery validation</a>
+<a href='http://affinno.wordpress.com/tag/lambda-expressions/' class='tag-link-4397453' title='2 berichten' style='font-size: 16.4pt;'>Lambda expressions</a>
+<a href='http://affinno.wordpress.com/tag/linq/' class='tag-link-114227' title='1 bericht' style='font-size: 8pt;'>Linq</a>
+<a href='http://affinno.wordpress.com/tag/logging/' class='tag-link-62087' title='1 bericht' style='font-size: 8pt;'>logging</a>
+<a href='http://affinno.wordpress.com/tag/mobile-development/' class='tag-link-93954' title='1 bericht' style='font-size: 8pt;'>mobile development</a>
+<a href='http://affinno.wordpress.com/tag/nlog/' class='tag-link-4483700' title='1 bericht' style='font-size: 8pt;'>Nlog</a>
+<a href='http://affinno.wordpress.com/tag/roboform/' class='tag-link-948889' title='1 bericht' style='font-size: 8pt;'>Roboform</a>
+<a href='http://affinno.wordpress.com/tag/route/' class='tag-link-169863' title='1 bericht' style='font-size: 8pt;'>route</a>
+<a href='http://affinno.wordpress.com/tag/rss-feed/' class='tag-link-120135' title='1 bericht' style='font-size: 8pt;'>RSS feed</a>
+<a href='http://affinno.wordpress.com/tag/scott-guthrie/' class='tag-link-897845' title='1 bericht' style='font-size: 8pt;'>Scott Guthrie</a>
+<a href='http://affinno.wordpress.com/tag/scrum/' class='tag-link-46805' title='3 berichten' style='font-size: 22pt;'>Scrum</a>
+<a href='http://affinno.wordpress.com/tag/selenium/' class='tag-link-111899' title='1 bericht' style='font-size: 8pt;'>Selenium</a>
+<a href='http://affinno.wordpress.com/tag/silverlight/' class='tag-link-984139' title='1 bericht' style='font-size: 8pt;'>Silverlight</a>
+<a href='http://affinno.wordpress.com/tag/sql-server/' class='tag-link-6407' title='1 bericht' style='font-size: 8pt;'>Sql Server</a>
+<a href='http://affinno.wordpress.com/tag/sqlserver/' class='tag-link-86759' title='1 bericht' style='font-size: 8pt;'>SqlServer</a>
+<a href='http://affinno.wordpress.com/tag/technisch-ontwerp/' class='tag-link-9346336' title='2 berichten' style='font-size: 16.4pt;'>Technisch ontwerp</a>
+<a href='http://affinno.wordpress.com/tag/testen/' class='tag-link-438713' title='1 bericht' style='font-size: 8pt;'>Testen</a>
+<a href='http://affinno.wordpress.com/tag/tortoise/' class='tag-link-215539' title='1 bericht' style='font-size: 8pt;'>Tortoise</a>
+<a href='http://affinno.wordpress.com/tag/visualsvn/' class='tag-link-2905990' title='1 bericht' style='font-size: 8pt;'>VisualSVN</a>
+<a href='http://affinno.wordpress.com/tag/watermerk-textbox/' class='tag-link-10323673' title='1 bericht' style='font-size: 8pt;'>Watermerk textbox</a></div></div>		</div>
+	</div>
+
+	<br style="clear:both" /><!-- without this little <br /> NS6 and IE5PC do not stretch the frame div down to encopass the content DIVs -->
+</div>
+
+<!-- footer -->
+
+<hr style="display:none"/>
+
+<div id="footer">
+	<small class="footer_content">
+	<a href="http://nl.wordpress.com/?ref=footer" rel="generator">Blog op Wordpress.com</a>. Thema: Freshy door <a href="http://www.jide.fr/" rel="designer">Jide</a>.	</small>
+
+</div>
+
+</div> <!--- end of the <div id="page"> (from header.php) -->
+
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?aa&#038;ver=3.4-alpha-19719'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1318621576g&#038;ver=3.4-alpha-19719'></script>
+
+<script type="text/javascript">
+var _qevents = _qevents || [], wpcomQuantcastData = {"qacct":"p-18-mFEk4J448M","labels":",language.nl,type.wpcom"};
+function wpcomQuantcastPixel( labels, options ) {
+	var i, defaults = wpcomQuantcastData, data = { event: 'ajax' };
+
+	labels  = labels  || '';
+	options = options || {};
+
+	if ( typeof labels != 'string' )
+		options = labels;
+
+	for ( i in defaults ) {
+		data[i] = defaults[i];
+	}
+
+	for ( i in options ) {
+		data[i] = options[i];
+	}
+
+	if ( data.labels ) {
+		data.labels += ',' + labels;
+	} else {
+		data.labels = labels;
+	}
+
+	_qevents.push( data );
+};
+(function() {var elem = document.createElement('script');elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";elem.async = true;elem.type = "text/javascript";var scpt = document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem, scpt);  })();
+_qevents.push( wpcomQuantcastData );
+</script>
+<noscript><div style="display: none;"><img src="//pixel.quantserve.com/pixel/p-18-mFEk4J448M.gif?labels=%2Clanguage.nl%2Ctype.wpcom" height="1" width="1" alt="" /></div></noscript>
+
+<script>jQuery(document).ready(function($){ Gravatar.profile_cb = function( h, d ) { WPGroHo.syncProfileData( h, d );	}; Gravatar.my_hash = WPGroHo.my_hash; Gravatar.init( 'body', '#wp-admin-bar-my-account' ); });</script>	<div style="display:none">
+	</div>
+		<style type="text/css">
+			
+				.reblog-from img                   { margin: 0 10px 0 0; vertical-align: middle; padding: 0; border: 0; }
+				.reblogger-note img.avatar         { float: left; padding: 0; border: 0; }
+				.reblogger-note-content            { margin: 0 0 20px 35px; }
+				.reblog-post                       { border-left: 3px solid #eee; padding-left: 15px; }
+				.reblog-post ul.thumb-list         { display: block; list-style: none; margin: 2px 0; padding: 0; clear: both; }
+				.reblog-post ul.thumb-list li      { display: inline; margin: 0; padding: 0 1px; border: 0; }
+				.reblog-post ul.thumb-list li a    { margin: 0; padding: 0; border: 0; }
+				.reblog-post ul.thumb-list li img  { margin: 0; padding: 0; border: 0; }
+				.reblog-post                       { border-left: 3px solid #eee; padding-left: 15px; }
+					</style>	
+	<div id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id='bsub-text'>Follow</span></a>
+		<div id="bitsubscribe">
+			
+					<h3><label for="loggedout-follow-field">Follow &ldquo;Affinno's Weblog&rdquo;</label></h3>
+		
+			<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Get every new post delivered to your Inbox.</p>
+
+					
+			
+			<p><input type="text" name="email" style="width: 95%; padding: 1px 2px" value="Enter your email address" onfocus='this.value=(this.value=="Enter your email address") ? "" : this.value;' onblur='this.value=(this.value=="") ? "Enter email address" : this.value;'  id="loggedout-follow-field"/></p>
+
+			<input type="hidden" name="action" value="subscribe"/>
+			<input type="hidden" name="blog_id" value="4221916"/>
+			<input type="hidden" name="source" value="http://affinno.wordpress.com/tag/jqmodal/"/>
+			<input type="hidden" name="sub-type" value="loggedout-follow"/>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="e9c3aff42d" /><input type="hidden" name="_wp_http_referer" value="/tag/jqmodal/" />
+			<p id='bsub-subscribe-button'><input type="submit" value="Sign me up" /></p>
+			</form>
+					<div id='bsub-credit'><a href="http://wordpress.com/signup/?ref=lof">Powered by WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+<script type='text/javascript' src='http://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter/scripts/shCore.js?m=1317425421g&#038;ver=2.1.364b'></script>
+<script type='text/javascript' src='http://s1.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter/scripts/shBrushCSharp.js?m=1317425421g&#038;ver=2.1.364b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var themecssurl = "http://s0.wp.com/wp-content/plugins/syntaxhighlighter-wpcom/shThemeDefault.css?m=1317425413g&amp;ver=2.1.364b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.getElementsByTagName("head")[0].appendChild(themecss);
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://s2.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter/scripts/clipboard.swf?m=1317425421g';
+	SyntaxHighlighter.config.strings.expandSource = 'Bekijk bron';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'kopiëren naar klembord';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'De code is nu in uw klembord ';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="http://s.stats.wordpress.com/w.js?21" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({'blog':'4221916','v':'wpcom','user_id':'0','subd':'affinno'});
+ex_go({'crypt':'UE40eW5QN0p8M2Y/RE1LVmwrVi5vQS5fVFtfdHBbPyw1VXIrU3hWLHhmbV9bVj1ZaDU2ZjdDR0csVEhSMVlYYVFKNXo5YytOZFk4cjB+UzNyZlVreUQtYVdlSi9dLGYvQnU9MW5JUWM9P2prRyVBM0xidkJZVWU9ckRvNi5hZXEtd2xbOWl3fmZUQ0dyOGQlLytBM3FrcUp1NldUVDMxVzhyaiZCR2Y5S28mWV83cDRPeE4tS003cGMrK1pWMWVQP2ZwV1N5WEcuMS5dK1JQMFM/dWgmdlpOYUkzbXh3TllscQ=='});
+addLoadEvent(function(){linktracker_init('4221916',0);});
+	</script>
+<noscript><img src="http://stats.wordpress.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+</body>
+</html>
